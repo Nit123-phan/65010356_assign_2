@@ -12,7 +12,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   position: fixed;
-  background-image: url('/public/cool.jpg'); /* รูปภาพพื้นหลัง */
+  background-color:#113750; /* รูปภาพพื้นหลัง */
   background-size: cover; /* ทำให้รูปภาพเติมพื้นที่ทั้งหมด */
   background-position: center; /* จัดรูปภาพให้อยู่กลาง */
   background-repeat: no-repeat; /* ไม่ให้รูปภาพทำซ้ำ */
