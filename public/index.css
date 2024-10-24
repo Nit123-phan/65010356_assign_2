@@ -1,0 +1,225 @@
+/* ตั้งค่า layout พื้นฐาน */
+body {
+  display: flex;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* สไตล์สำหรับ sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  background-image: url('/public/cool.jpg'); /* รูปภาพพื้นหลัง */
+  background-size: cover; /* ทำให้รูปภาพเติมพื้นที่ทั้งหมด */
+  background-position: center; /* จัดรูปภาพให้อยู่กลาง */
+  background-repeat: no-repeat; /* ไม่ให้รูปภาพทำซ้ำ */
+  left: 0;
+  top: 0;
+}
+
+.sidebar .navbar ul {
+  list-style-type: none; /* ลบสัญลักษณ์จุด */
+  padding: 0; /* ลบการ padding */
+  margin: 15px 0; /* ลบการ margin */
+  display: block; /* ให้เป็นบล็อกเพื่อเรียงแนวตั้ง */
+}
+
+.sidebar .navbar ul li {
+  margin: 15px 30px; /* เพิ่มระยะห่างระหว่างรายการ */
+}
+
+.sidebar .navbar ul li a {
+  display: block; /* ทำให้ลิงก์มีขนาดเต็มรายการ */
+  padding: 10px; /* เพิ่ม padding รอบๆ ลิงก์ */
+  color: white; /* สีตัวอักษร */
+  background-color: #444; /* สีพื้นหลังของลิงก์ */
+  border-radius: 5px; /* มุมโค้ง */
+  text-decoration: none; /* ลบเส้นใต้ */
+  transition: background-color 0.3s; /* การเปลี่ยนสีเมื่อ hover */
+}
+
+.sidebar .navbar ul li a:hover {
+  background-color: #555; /* สีพื้นหลังเมื่อวางเมาส์ */
+}
+
+/* สไตล์สำหรับเนื้อหาหลัก */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  width: 100%;
+}
+
+.content-section {
+  margin-bottom: 40px;
+  padding: 30px; 
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar {
+  position: sticky;
+  color: white;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #333;
+  padding: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  background-color: #fff;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px; /* ปรับขนาดตัวอักษร */
+}
+
+thead {
+  background-color: #074168; /* สีพื้นหลังของหัวตาราง */
+  color: white; /* สีตัวอักษรของหัวตาราง */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* สีพื้นหลังของแถวที่เป็นเลขคี่ */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #b2dadfd3; /* สีพื้นหลังของแถวที่เป็นเลขคู่ */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+/* สไตล์สำหรับฟอร์ม */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form input, form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* สไตล์สำหรับ pagination */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-controls button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-controls button:hover {
+  background-color: #555;
+}
+
+#page-number {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* สไตล์สำหรับปุ่มและ input */
+button, input[type="submit"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+input[type="text"], input[type="number"] {
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  box-shadow: 0 0 5px #888;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scroll effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px; /* ลดขนาด sidebar บนอุปกรณ์ที่มีขนาดเล็ก */
+  }
+
+  .main-content {
+      margin-left: 200px; /* ปรับขนาดเนื้อหา */
+  }
+
+  table {
+      font-size: 14px; /* ปรับขนาดตัวอักษร */
+  }
+}
